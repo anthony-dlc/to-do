@@ -1,10 +1,13 @@
 function verifyEmptyString(str) {
-  if (str.trim() === "") {
-    console.log("Error");
-    throw new Error("Debe ingresar un nombre");
-  } else {
-    console.log("todo bien");
+  if (str.trim() !== "") {
+    return true;
   }
 }
 
-export { verifyEmptyString };
+function verifyNullValues(el) {
+  if (el !== null) {
+    return true;
+  }
+}
+
+export { verifyEmptyString, verifyNullValues };

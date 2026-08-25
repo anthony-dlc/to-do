@@ -1,0 +1,29 @@
+// Usuario edita proyecto(nombre):
+//   - Obtener id y nuevo nombre del proyecto.
+//   - Buscar proyecto por id en el almacen. busca y verifica, si existe retorna el objeto sino retorna error.
+//   - Cambiar nombre del proyecto.
+//   - Almacenar proyecto.
+
+// pasar id para buscar el elemento dentro del Almacen, verificar si se ingreso un id y un nombre, buscar ese elemento por id, acceder a su nombre y cambiarlo.
+import {
+  verifyEmptyString,
+  verifyNullValues,
+} from "../verification/verifications.js";
+import getElement from "../storage/findElement.js";
+import uploadElement from "../storage/uploadElement.js";
+
+export default function editProjectName(id, name) {
+  const verifyId = verifyEmptyString(id);
+  const verifyName = verifyEmptyString(name);
+  if (verifyId && verifyName) {
+    const project = getElement(id);
+    if (verifyNullValues(project)) {
+      const projectParsed = JSON.parse(project);
+      projectParsed.name = name;
+      uploadElement(projectParsed);
+      return;
+    }
+    return "Project not found!";
+  }
+  return "Fill both campus";
+}
