@@ -91,13 +91,13 @@
 
 1.	“Usuario hace x” -> que pasa paso a paso, que clase/métodos se llaman en que orden. 3-5 casos de uso bien definidos cubren la mayoría de la lógica real.
 
-Usuario crea nuevo proyecto:
+Usuario crea nuevo proyecto:✅
   - LLamar funcion crear nuevo proyecto.
   - Ingresar nombre del proyecto.
   - Verificar que haya un nombre para el proyecto.
   - Almacenar Proyecto.
 
-Usuario edita proyecto(nombre):
+Usuario edita proyecto(nombre):✅
   - Obtener id y nuevo nombre del proyecto.
   - Buscar proyecto por id en el almacen. busca y verifica, si existe retorna el objeto sino retorna error.
   - Cambiar nombre del proyecto.
