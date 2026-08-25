@@ -12,5 +12,5 @@ export default function eliminateProject(id) {
     eliminateElement(id);
     return;
   }
-  return "Insert and ID"; // false
+  return "Insert an ID"; // false
 }
