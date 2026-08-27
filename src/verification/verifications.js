@@ -10,4 +10,12 @@ function verifyNullValues(el) {
   }
 }
 
+// function verifyObject(el) {
+//   for (const key in el) {
+//     if (el[key] !== undefined) {
+//       return true;
+//     }
+//   }
+// }
+
 export { verifyEmptyString, verifyNullValues };

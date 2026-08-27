@@ -4,14 +4,13 @@
 // mostrar elemento
 
 import { verifyEmptyString } from "../verification/verifications.js";
-import getElement from "../storage/findElement.js";
+import getElement from "../storage/getElement.js";
 
 export default function readProject(id) {
-  const verifyElementId = verifyEmptyString(id);
+  const verifyElementId = verifyEmptyString(id); // En la proyecto con el dom esta linea se va.
   if (verifyElementId) {
     const project = getElement(id);
-    const projectParsed = JSON.parse(project);
-    return projectParsed;
+    return project;
   }
   return "Insert an Id";
 }

@@ -9,18 +9,17 @@ import {
   verifyEmptyString,
   verifyNullValues,
 } from "../verification/verifications.js";
-import getElement from "../storage/findElement.js";
-import uploadElement from "../storage/uploadElement.js";
+import getElement from "../storage/getElement.js";
+import uploadElement from "../storage/uploadProject.js";
 
 export default function editProjectName(id, name) {
-  const verifyId = verifyEmptyString(id);
-  const verifyName = verifyEmptyString(name);
+  const verifyId = verifyEmptyString(id); // En la proyecto con el dom esta linea se va.
+  const verifyName = verifyEmptyString(name); // En la proyecto con el dom esta linea se va.
   if (verifyId && verifyName) {
     const project = getElement(id);
     if (verifyNullValues(project)) {
-      const projectParsed = JSON.parse(project);
-      projectParsed.name = name;
-      uploadElement(projectParsed);
+      project.name = name;
+      uploadElement(project);
       return;
     }
     return "Project not found!";

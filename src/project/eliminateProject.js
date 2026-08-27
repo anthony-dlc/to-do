@@ -7,7 +7,7 @@ import { verifyEmptyString } from "../verification/verifications.js";
 import eliminateElement from "../storage/eliminateElement.js";
 
 export default function eliminateProject(id) {
-  const verifyElementId = verifyEmptyString(id);
+  const verifyElementId = verifyEmptyString(id); // En la proyecto con el dom esta linea se va.
   if (verifyElementId) {
     eliminateElement(id);
     return;
