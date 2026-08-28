@@ -8,10 +8,12 @@ const __dirname = path.dirname(__filename);
 export default {
   entry: {
     app: "./src/index.js",
+    // app: "./src/display/aside/forms/addProjectForm.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: "Production",
+      template: "./src/index.html",
     }),
   ],
   output: {
@@ -21,9 +23,13 @@ export default {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.css$/i,
+      //   use: ["css-loader"],
+      // },
       {
-        test: /\.css$/i,
-        use: ["css-loader"],
+        test: /\.html$/i,
+        use: ["html-loader"],
       },
     ],
   },
