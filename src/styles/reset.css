@@ -135,6 +135,7 @@ svg {
   fill: currentColor;
 }
 body {
+  position: relative;
   min-height: 100vh;
   line-height: 1.5em;
   color: inherit;
