@@ -13,16 +13,16 @@ import getProjectIndex from "../storage/projectIndex.js";
 export default function readProject(id) {
   const projectContainer = getElement("projects");
   const verifyElementId = verifyEmptyString(id);
-  const projectIndex = getProjectIndex(id);
   if (verifyElementId) {
-    const project = projectContainer[projectIndex];
-    if(project === undefined){
-      console.log("Project not found")
-      return
+    const projectIndex = getProjectIndex(id);
+    if (projectIndex !== -1) {
+      const project = projectContainer[projectIndex];
+      console.log(project);
+      return project;
     }
-    console.log(project);
-    return project;
+    console.log("Project not found");
+    return;
   }
-  console.log("Insert an Id")
+  console.log("Insert an Id");
   return "Insert an Id";
 }

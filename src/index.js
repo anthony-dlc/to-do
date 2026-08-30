@@ -31,10 +31,13 @@
 
 // ############################# LOGICA NUEVA ##############################
 
-import createNewProject from "./project/createProject.js";
-import readProject from "./project/readProject.js";
-import editProjectName from "./project/editProject.js";
-import uploadElement from "./storage/uploadProject.js";
-import getElement from "./storage/getElement.js";
+import createNewProject from "./project/createProject.js"; // Project Crud
+import readProject from "./project/readProject.js"; // Project Crud
+import editProjectName from "./project/editProject.js"; // Project Crud
+import eliminateProject from "./project/eliminateProject.js"; // Project Crud
 
+
+
+import uploadElement from "./storage/uploadProject.js"; // Storage
+import getElement from "./storage/getElement.js"; // Storage
 

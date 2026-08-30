@@ -17,8 +17,6 @@ export default function createNewProject(name) {
     uploadElement(projectContainer);
     return;
   }
-  alert("Insert a Project name");
+  console.log("Insert a Project name");
   return;
 }
-
-
