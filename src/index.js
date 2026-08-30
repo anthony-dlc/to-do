@@ -31,14 +31,7 @@
 
 // ############################# LOGICA NUEVA ##############################
 
-import projectContainer from "./project/projectContainer.js";
 import createNewProject from "./project/createProject.js";
+import readProject from "./project/readProject.js";
 import uploadElement from "./storage/uploadProject.js";
-
-uploadElement(projectContainer);
-
-createNewProject("Anthony")
-createNewProject("Naomi")
-createNewProject("Marisol")
-
-
+import getElement from "./storage/getElement.js";

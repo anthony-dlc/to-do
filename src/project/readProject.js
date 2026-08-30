@@ -1,16 +1,28 @@
-// recibir id
-// verificar que no este vacio
-// buscar elemento el localstorage
-// mostrar elemento
+// - Recibir id del proyecto.
+// - Llamar array desde localStorage.
+// - Obtener indice del id del proyecto dentro del array.
+// - Si aparece:
+//   - Mostrar proyecto.
+// - Si no:
+//   - Mostrar (Proyecto no encontrado)
 
 import { verifyEmptyString } from "../verification/verifications.js";
 import getElement from "../storage/getElement.js";
+import getProjectIndex from "../storage/projectIndex.js";
 
 export default function readProject(id) {
-  const verifyElementId = verifyEmptyString(id); // En la proyecto con el dom esta linea se va.
+  const projectContainer = getElement("projects");
+  const verifyElementId = verifyEmptyString(id);
+  const projectIndex = getProjectIndex(id);
   if (verifyElementId) {
-    const project = getElement(id);
+    const project = projectContainer[projectIndex];
+    if(project === undefined){
+      console.log("Project not found")
+      return
+    }
+    console.log(project);
     return project;
   }
+  console.log("Insert an Id")
   return "Insert an Id";
 }
