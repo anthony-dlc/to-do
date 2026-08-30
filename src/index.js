@@ -33,5 +33,8 @@
 
 import createNewProject from "./project/createProject.js";
 import readProject from "./project/readProject.js";
+import editProjectName from "./project/editProject.js";
 import uploadElement from "./storage/uploadProject.js";
 import getElement from "./storage/getElement.js";
+
+

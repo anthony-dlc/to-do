@@ -1,28 +1,35 @@
-// Usuario edita proyecto(nombre):
-//   - Obtener id y nuevo nombre del proyecto.
-//   - Buscar proyecto por id en el almacen. busca y verifica, si existe retorna el objeto sino retorna error.
+// - Recibir id y nuevo nombre.
+// - Llamar array desde localStorage.
+// - Obtener indice del id del proyecto dentro del array.
+// - Si aparece:
 //   - Cambiar nombre del proyecto.
-//   - Almacenar proyecto.
+//   - Agregar Array a localStorage. -> agregar array con el mismo nombre siempre
+// - Si no:
+//   - Mostrar (Proyecto no encontrado).
 
-// pasar id para buscar el elemento dentro del Almacen, verificar si se ingreso un id y un nombre, buscar ese elemento por id, acceder a su nombre y cambiarlo.
 import {
   verifyEmptyString,
   verifyNullValues,
 } from "../verification/verifications.js";
 import getElement from "../storage/getElement.js";
 import uploadElement from "../storage/uploadProject.js";
+import getProjectIndex from "../storage/projectIndex.js";
 
 export default function editProjectName(id, name) {
+  const projectContainer = getElement("projects");
   const verifyId = verifyEmptyString(id); // En la proyecto con el dom esta linea se va.
   const verifyName = verifyEmptyString(name); // En la proyecto con el dom esta linea se va.
   if (verifyId && verifyName) {
-    const project = getElement(id);
-    if (verifyNullValues(project)) {
-      project.name = name;
-      uploadElement(project);
+    const projectIndex = getProjectIndex(id);
+    if (projectIndex !== -1) {
+      projectContainer[projectIndex].name = name;
+      uploadElement(projectContainer);
+      console.log("Project name changed");
       return;
     }
-    return "Project not found!";
+    console.log("Project not found");
+    return;
   }
+  console.log("Fill both campus");
   return "Fill both campus";
 }
