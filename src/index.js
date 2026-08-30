@@ -1,12 +1,44 @@
-import "./styles/reset.css";
-import "./styles/header.css";
-import "./styles/aside.css";
-import "./styles/form.css";
+// import "./styles/reset.css";
+// import "./styles/header.css";
+// import "./styles/aside.css";
+// import "./styles/form.css";
 
-import closeForm from "./display/forms/closeForm.js";
+// import closeForm from "./display/forms/closeForm.js";
+// import aside from "./display/aside/aside.js";
+// import formAddNewProject from "./display/forms/addNewProjectForm.js";
+// import showProject from "./display/showProjects.js";
 
-const body = document.querySelector("body");
-const formContainer = document.querySelector(".form-container");
-const container = document.querySelector(".container");
+// // import addCreateBtn from "./display/aside/btnCreateProject.js"; // borrar
 
-closeForm(formContainer)
+// const body = document.querySelector("body");
+// const formContainer = document.querySelector(".form-container");
+// const container = document.querySelector(".container");
+
+// closeForm(formContainer);
+
+// container.append(aside());
+
+// // formContainer.append(formAddNewProject());
+
+// const project = document.querySelector(".projects-container"); // borrar
+// // project.append(showProject());
+
+// // project.append(addCreateBtn()); // borrar
+// // project.append(addCreateBtn()); // borrar
+// // project.append(addCreateBtn()); // borrar
+// // project.append(addCreateBtn()); // borrar
+// // project.append(addCreateBtn()); // borrar
+
+// ############################# LOGICA NUEVA ##############################
+
+import projectContainer from "./project/projectContainer.js";
+import createNewProject from "./project/createProject.js";
+import uploadElement from "./storage/uploadProject.js";
+
+uploadElement(projectContainer);
+
+createNewProject("Anthony")
+createNewProject("Naomi")
+createNewProject("Marisol")
+
+

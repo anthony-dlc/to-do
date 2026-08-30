@@ -1,4 +1,4 @@
-export default function getElement(id) {
-  const element = localStorage.getItem(id);
-  return JSON.parse(element);
+export default function getElement(arr) {
+  const projectContainer = localStorage.getItem(arr);
+  return JSON.parse(projectContainer);
 }

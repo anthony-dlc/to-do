@@ -1,3 +1,3 @@
-export default function uploadElement(element) {
-  localStorage.setItem(element.id, JSON.stringify(element));
+export default function uploadElement(arr) {
+  localStorage.setItem("projects", JSON.stringify(arr));
 }

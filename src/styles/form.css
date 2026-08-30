@@ -1,13 +1,89 @@
 .form-container {
-  background-color: aqua;
+  /* background-color: aqua; */
+  background-color: #000000a0;
   position: absolute;
   z-index: 10000;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hide {
   display: none;
+}
+
+/* ############################################# */
+
+.form-add-new-project {
+  /* background-color: lightcoral; */
+  background-color: var(--high-surface);
+  padding: 48px 24px;
+  border-radius: 16px;
+  position: relative;
+  color: var(--second-text);
+}
+
+.form-add-new-project .btn-close-form {
+  position: absolute;
+  width: 24px;
+  top: 16px;
+  right: 16px;
+  padding: 0;
+  transition: transform 0.2s ease-in; /* test */
+}
+
+.btn-close-form svg {
+  fill: #ff0000;
+}
+
+.form-add-new-project .btn-close-form:hover {
+  transform: scale(1.1);
+}
+
+.form-add-new-project h2 {
+  /* background-color: lightgoldenrodyellow; */
+  color: var(--main-text);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form-add-new-project label {
+  margin: 12px 0;
+}
+
+.form-add-new-project input {
+  border: 1px solid var(--borders);
+  background-color: #8b5cf614;
+  outline: none;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.form-add-new-project input:focus {
+  outline: 1px solid var(--primary);
+}
+
+.form-add-new-project .add-new-project {
+  background-color: var(--primary);
+  color: var(--main-text);
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease-in; /* test */
+}
+
+.form-add-new-project .add-new-project:hover {
+  background-color: #8b5cf684;
+  transform: scale(1.01);
 }
