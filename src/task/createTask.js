@@ -17,7 +17,7 @@ export default function createNewTask(projectId,taskProperties) {
   const projectContainer = getElement("projects");
   const verification = verifyEmptyString(projectId);
   if (verification) {
-    const projectIndex = getProjectIndex(projectId);
+    const projectIndex = getProjectIndex(projectContainer,projectId);
     if (projectIndex !== -1) {
       const task = new Task(...taskProperties)
       projectContainer[projectIndex].taskList.push(task);

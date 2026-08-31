@@ -20,7 +20,7 @@ export default function editProjectName(id, name) {
   const verifyId = verifyEmptyString(id); // En la proyecto con el dom esta linea se va.
   const verifyName = verifyEmptyString(name); // En la proyecto con el dom esta linea se va.
   if (verifyId && verifyName) {
-    const projectIndex = getProjectIndex(id);
+    const projectIndex = getProjectIndex(projectContainer, id);
     if (projectIndex !== -1) {
       projectContainer[projectIndex].name = name;
       uploadElement(projectContainer);

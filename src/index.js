@@ -37,11 +37,8 @@ import editProjectName from "./project/editProject.js"; // Project Crud
 import eliminateProject from "./project/eliminateProject.js"; // Project Crud
 
 import createNewTask from "./task/createTask.js"; // Task Crud
-import readTask from "./task/readTask.js";
-
-
+import readTask from "./task/readTask.js"; // Task Crud
+import editTask from "./task/editTask.js"; // Task Crud
 
 import uploadElement from "./storage/uploadProject.js"; // Storage
 import getElement from "./storage/getElement.js"; // Storage
-
-// eliminateProject('b6276cb5-d6d7-44d7-91de-f06454a739f5')

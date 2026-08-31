@@ -15,7 +15,7 @@ import getProjectIndex from "../storage/projectIndex.js";
 
 export default function readTask(projectId, taskId) {
   const projectContainer = getElement("projects");
-  const projectIndex = getProjectIndex(projectId);
+  const projectIndex = getProjectIndex(projectContainer,projectId);
   if (projectIndex !== -1) {
     const task = projectContainer[projectIndex].taskList.find(
       (t) => (t.id === taskId),

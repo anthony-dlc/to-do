@@ -14,7 +14,7 @@ export default function readProject(id) {
   const projectContainer = getElement("projects");
   const verifyElementId = verifyEmptyString(id);
   if (verifyElementId) {
-    const projectIndex = getProjectIndex(id);
+    const projectIndex = getProjectIndex(projectContainer,id);
     if (projectIndex !== -1) {
       const project = projectContainer[projectIndex];
       console.log(project);

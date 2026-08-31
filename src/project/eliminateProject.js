@@ -18,7 +18,7 @@ export default function eliminateProject(id) {
   const projectContainer = getElement("projects");
   const verifyElementId = verifyEmptyString(id); // En la proyecto con el dom esta linea se va.
   if (verifyElementId) {
-    const projectIndex = getProjectIndex(id);
+    const projectIndex = getProjectIndex(projectContainer,id);
     if (projectIndex !== -1) {
       projectContainer.splice(projectIndex, 1);
       uploadElement(projectContainer);

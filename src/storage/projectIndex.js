@@ -1,8 +1,7 @@
 import getElement from "./getElement.js";
 
-export default function getProjectIndex(id) {
-  const projectContainer = getElement("projects");
-  const project = projectContainer.findIndex((p) => p.id === id);
+export default function getProjectIndex(arr,id) {
+  const project = arr.findIndex((p) => p.id === id);
 
   return project;
 }
