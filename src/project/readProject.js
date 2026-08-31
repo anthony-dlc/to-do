@@ -17,7 +17,6 @@ export default function readProject(id) {
     const projectIndex = getProjectIndex(projectContainer,id);
     if (projectIndex !== -1) {
       const project = projectContainer[projectIndex];
-      console.log(project);
       return project;
     }
     console.log("Project not found");

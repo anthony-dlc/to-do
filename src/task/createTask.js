@@ -30,6 +30,4 @@ export default function createNewTask(projectId,taskProperties) {
   }
   console.log("Insert a project id");
   return;
-  // project.taskList.push(taskProperties);
-  // uploadElement(project);
 }
