@@ -36,8 +36,8 @@ import readProject from "./project/readProject.js"; // Project Crud
 import editProjectName from "./project/editProject.js"; // Project Crud
 import eliminateProject from "./project/eliminateProject.js"; // Project Crud
 
+import createNewTask from "./task/addTask.js"; // Task Crud
 
 
 import uploadElement from "./storage/uploadProject.js"; // Storage
 import getElement from "./storage/getElement.js"; // Storage
-

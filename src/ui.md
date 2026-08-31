@@ -56,7 +56,7 @@ vamos a cambiar la logica, vamos a crear un array que guarde todos los proyectos
   - Si no:
     - Mostrar (Proyecto no encontrado).
 
-<!-- MANEJAR TAREAS -->
+# MANEJAR TAREAS:
 
 ## Crear Tarea:
 
