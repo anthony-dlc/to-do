@@ -1,61 +1,46 @@
-// import "./styles/reset.css";
-// import "./styles/header.css";
-// import "./styles/aside.css";
-// import "./styles/form.css";
+import "./styles/reset.css";
+import "./styles/header.css";
+import "./styles/main.css";
+import "./styles/form.css";
+import "./styles/section.css";
 
-// import closeForm from "./display/forms/closeForm.js";
-// import aside from "./display/aside/aside.js";
-// import formAddNewProject from "./display/forms/addNewProjectForm.js";
-// import showProject from "./display/showProjects.js";
+import containerEvents from "./display/containerEvents.js";
+import bodyEvents from "./display/bodyEvents.js";
+import documentEvents from "./documentEvents.js";
 
-// // import addCreateBtn from "./display/aside/btnCreateProject.js"; // borrar
+import mainContent from "./display/homePage/main.js";
+import uploadElement from "./storage/uploadProject.js";
+import closeFormContainer from "./display/closeFormContainer.js";
+import showProjects from "./display/homePage/showProject/showProjects.js";
 
-// const body = document.querySelector("body");
-// const formContainer = document.querySelector(".form-container");
-// const container = document.querySelector(".container");
+import taskSection from "./display/taskSection/section.js"; // test
+import showTasks from "./display/taskSection/tasksList/showTasks.js";
+import readProject from "./project/readProject.js";
 
-// closeForm(formContainer);
+const storage = "projects" in localStorage;
 
-// container.append(aside());
+const body = document.querySelector("body");
+const formContainer = document.querySelector(".form-container");
+const container = document.querySelector(".container");
 
-// // formContainer.append(formAddNewProject());
+documentEvents();
+bodyEvents();
+containerEvents();
 
-// const project = document.querySelector(".projects-container"); // borrar
-// // project.append(showProject());
+if (!storage) {
+  uploadElement(projectContainer);
+}
 
-// // project.append(addCreateBtn()); // borrar
-// // project.append(addCreateBtn()); // borrar
-// // project.append(addCreateBtn()); // borrar
-// // project.append(addCreateBtn()); // borrar
-// // project.append(addCreateBtn()); // borrar
+closeFormContainer(formContainer);
 
-// ############################# LOGICA NUEVA ##############################
+// container.append(mainContent()); // MUESTRA LA PAGINA PRINCIPAL
 
-// localStorage.setItem("projects", JSON.stringify([]))
+// showProjects(); // Desactivar cuando la pagina principal este disponible, // SIEMPRE ACTIVA PARA MOSTRAR LOS PROYECTOS EN EL ASIDE
 
-import createNewProject from "./project/createProject.js"; // Project Crud
-import readProject from "./project/readProject.js"; // Project Crud
-import editProjectName from "./project/editProject.js"; // Project Crud
-import eliminateProject from "./project/eliminateProject.js"; // Project Crud
+// #############################################
 
-import createNewTask from "./task/createTask.js"; // Task Crud
-import readTask from "./task/readTask.js"; // Task Crud
-import editTask from "./task/editTask.js"; // Task Crud
-import eliminateTask from "./task/eliminateTask.js"; // Task Crud
+container.append(taskSection("b370c036-e4c3-46ad-b173-c1f6e09db42e"));
+showTasks("b370c036-e4c3-46ad-b173-c1f6e09db42e");
+// #############################################
 
-import uploadElement from "./storage/uploadProject.js"; // Storage
-import getElement from "./storage/getElement.js"; // Storage
-
-
-
-// eliminateTask(
-// "bc4857c5-f46b-46de-a582-798e12aea521","cc691a84-0f32-4575-b9ec-ebf00a23cad8")
-
-const task01 = ["Homework","Do Homework","23/08","High","Not done"];
-const task02 = ["Workout","Functional workout","23/08","High","Done"];
-
-
-// createNewTask("d04f4cfb-de71-4f0d-9f8f-c40e9479b184",task02)
-
-
-
+// CERRAR PROJECT INFO LIST:

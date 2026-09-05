@@ -24,8 +24,8 @@ export default function readTask(projectId, taskId) {
       console.log("Task not found");
       return;
     }
-    console.log(task);
-    return;
+    // console.log(task);
+    return task;
   }
   console.log("Project not found");
   return;

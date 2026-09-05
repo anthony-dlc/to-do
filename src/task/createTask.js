@@ -22,7 +22,6 @@ export default function createNewTask(projectId,taskProperties) {
       const task = new Task(...taskProperties)
       projectContainer[projectIndex].taskList.push(task);
       uploadElement(projectContainer);
-      console.log(projectContainer);
       return;
     }
     console.log("Project not found");

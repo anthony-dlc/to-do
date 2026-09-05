@@ -23,6 +23,7 @@ export default function eliminateProject(id) {
       projectContainer.splice(projectIndex, 1);
       uploadElement(projectContainer);
       console.log("Project ");
+      return
     }
     console.log("Project not found");
     return;
