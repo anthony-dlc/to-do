@@ -8,7 +8,6 @@ const __dirname = path.dirname(__filename);
 export default {
   entry: {
     app: "./src/index.js",
-    // app: "./src/display/aside/forms/addProjectForm.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -17,6 +16,7 @@ export default {
     }),
   ],
   output: {
+    publicPath: '/to-do/',
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,

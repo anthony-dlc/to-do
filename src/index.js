@@ -14,6 +14,7 @@ import closeFormContainer from "./display/closeFormContainer.js";
 import showProjects from "./display/homePage/showProject/showProjects.js";
 
 const storage = "projects" in localStorage;
+const projectContainer = []
 
 const body = document.querySelector("body");
 const formContainer = document.querySelector(".form-container");
