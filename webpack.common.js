@@ -23,10 +23,6 @@ export default {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.css$/i,
-      //   use: ["css-loader"],
-      // },
       {
         test: /\.html$/i,
         use: ["html-loader"],
