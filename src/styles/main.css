@@ -68,7 +68,7 @@ section h1 {
   font-weight: bold;
   transition:
     background-color 0.3s ease,
-    transform 0.2s ease-in; /* test */
+    transform 0.2s ease-in; 
   width: 160px;
   height: 160px;
   border-radius: 16px;
@@ -78,8 +78,7 @@ section h1 {
 .project-card p {
   padding: 8px 0;
   width: 100%;
-  /* Para los 3 puntos */
-  white-space: nowrap; /* Evita que el texto baje a la siguiente línea */
-  overflow: hidden; /* Oculta el sobrante del texto que sale del contenedor */
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }

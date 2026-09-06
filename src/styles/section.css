@@ -1,5 +1,4 @@
 .project-page-btns {
-  /* background-color: lightblue; */
   width: 30px;
   position: absolute;
   top: 16px;
@@ -10,7 +9,7 @@
   transform: scale(1.01);
   transition:
     color 0.3s ease,
-    transform 0.2s ease-in; /* test */
+    transform 0.2s ease-in;
 }
 
 .info-project-button {
@@ -20,15 +19,6 @@
 .btn-back {
   left: 16px;
 }
-
-/* .header-section {
-  background-color: lightblue;
-  color: var(--main-text);
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  padding-top: 8px;
-} */
 
 .info-list {
   background-color: var(--high-surface);
@@ -44,6 +34,7 @@
   border: 1px solid var(--borders);
   width: 150px;
   color: var(--second-text);
+  transition: background-color 0.3s ease;
 }
 
 .project-btns-info:hover {
@@ -66,14 +57,9 @@
   position: relative;
   border: 1px solid var(--borders);
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: 3fr 80px 60px;
   border-radius: 8px;
   gap: 4px;
-}
-
-.taskList:hover {
-  /* background-color: lightcoral; */
-  background-color: var();
 }
 
 .task-btn,
@@ -87,7 +73,13 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  /* background-color: lightgoldenrodyellow; */
+  color: var(--main-text);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.task-btn:hover {
+  background-color: var(--primary);
 }
 
 .task-info {
@@ -96,6 +88,12 @@
   font-weight: bold;
   padding: 6px;
   border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.task-info-btn:hover,
+.task-info:hover {
+  background-color: #8b5cf663;
 }
 
 .task-info-content {
@@ -110,15 +108,14 @@
 }
 
 .task-info-btn {
+  font-weight: bold;
   background-color: var(--primary);
   color: var(--main-text);
   width: 120px;
   padding: 8px;
   border-radius: 8px;
   font-size: 1.1rem;
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease-in;
+  transition: background-color 0.3s ease;
 }
 
 .task-info-content {
@@ -128,6 +125,6 @@
   overflow-y: scroll;
 }
 
-.visible {
-  display: block;
+* {
+  scrollbar-width: none;
 }

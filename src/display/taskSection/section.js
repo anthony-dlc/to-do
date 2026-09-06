@@ -30,7 +30,7 @@ export default function taskSection(projectId) {
           <button type="button" class="btn-eliminate-project project-btns-info">Eliminate project</button>
         </li>
         <li> 
-          <button type="button" class="btn-edit-project project-btns-info">Edit Project Name</button>
+          <button type="button" class="btn-edit-project project-btns-info">Edit Project</button>
         </li>
       </ul>
       <h1>${prt.name}</h1>
@@ -43,7 +43,6 @@ export default function taskSection(projectId) {
       </button>
       <ul class="task-container"></ul>
       `;
-    // showTasks(project);
     return section;
   }
 }
